@@ -259,7 +259,7 @@ player.setCaptions(Uri, mimeType)
 The programmatic configuration options shown above can also be configured directly from your layout:
 
 ```xml
-<com.halilibo.bvpkotlin.MVideoPlayer
+<com.moktar.mvpkotlin.MVideoPlayer
     android:id="@+id/player"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
