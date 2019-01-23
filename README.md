@@ -28,22 +28,13 @@ Add this to your app/build.gradle repositories:
 maven { url 'https://jitpack.io' }
 ```
 
-Add this in your module's `build.gradle` file:
-
-```gradle
-dependencies {
-    // ... other dependencies
-    compile 'com.github.halilozercan:BetterVideoPlayer:kotlin-SNAPSHOT'
-}
-```
-
 
 ## Getting Started
 
 ##### Configuring a Player Activity
 
 You will need an `Activity` in your app that will hold the `BetterVideoPlayer` view and playback content.
-There's only a bit of configuration required. However, BetterVideoPlayer offers great 'customizability'.
+There's only a bit of configuration required. However, MVideoPlayer offers great 'customizability'.
 
 *Host Activity should disable recreation on orientation changes. This allows playback to continue
 when the device orientation changes. The player will adapt the aspect ratio accordingly. You just need to
@@ -58,11 +49,11 @@ set `android:configChanges` values to your `Activity` in `AndroidManifest.xml`:*
 
 ##### Layouts
 
-The layout for your player Activity can be very simple. You only need a `BetterVideoPlayer` view,
+The layout for your player Activity can be very simple. You only need a `MVideoPlayer` view,
 all the controls and everything else are created by the player itself.
 
 ```xml
-<com.moktar.mvpkotlin.BetterVideoPlayer
+<com.moktar.mvpkotlin.MVideoPlayer
     android:id="@+id/player"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
@@ -70,15 +61,15 @@ all the controls and everything else are created by the player itself.
 
 ### Notable Features
 
-BetterVideoPlayer is capable of almost all functionality that you expect from a VideoPlayer. However, it is important to repeat that
+MVideoPlayer is capable of almost all functionality that you expect from a VideoPlayer. However, it is important to repeat that
 BetterVideoPlayer uses Android MediaPlayer API. Thus, it __does not provide every codec in the world__. In the future, there is a plan for moving underlying
 player to ExoPlayer.
 
 #### Captions
 
-BetterVideoPlayer supports captions in 2 formats; [SRT](https://en.wikipedia.org/wiki/SubRip) and [WEBVTT](https://w3c.github.io/webvtt/). Support for more formats through pull requests will be appreciated.
+MVideoPlayer supports captions in 2 formats; [SRT](https://en.wikipedia.org/wiki/SubRip) and [WEBVTT](https://w3c.github.io/webvtt/). Support for more formats through pull requests will be appreciated.
 
-Captions can be obtained both online and from resource directory. BetterVideoPlayer __currently does not support captions from local file storage__.
+Captions can be obtained both online and from resource directory.MVideoPlayer __currently does not support captions from local file storage__.
 
 ```kotlin
 // Online SUBRIP subtitle
@@ -88,10 +79,10 @@ bvp.setCaptions("https://www.example.com/subrip.srt", CaptionsView.SubMime.SUBRI
 bvp.setCaptions(R.raw.sub, CaptionsView.SubMime.SUBRIP)
 ```
 
-BetterVideoPlayer also lets you define the text size(in sp) and color of captions inside XML view.
+MVideoPlayer also lets you define the text size(in sp) and color of captions inside XML view.
 
 ```xml
-<com.moktar.mvpkotlin.VideoPlayer
+<com.moktar.mvpkotlin.MVideoPlayer
         android:id="@+id/bvp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -101,7 +92,7 @@ BetterVideoPlayer also lets you define the text size(in sp) and color of caption
 
 #### Toolbar
 
-BetterVideoPlayer deploys a common toolbar at the top of the player. Toolbar is useful in a video player in two different ways.
+MVideoPlayer deploys a common toolbar at the top of the player. Toolbar is useful in a video player in two different ways.
 - It offers a highly customizable Title area.
 - You can inflate a menu on the toolbar and define as many actions as you need.
 
@@ -126,9 +117,9 @@ __Important point:__ You need to use `enableSwipeGestures(Window)` method to als
 Initializing the player is very simple. You just set a callback listener and a source.
 
 ```kotlin
-class MyPlayerActivity : AppCompatActivity , BetterVideoCallback {
+class MyPlayerActivity : AppCompatActivity , MVideoCallback {
 
-    lateinit var player: BetterVideoPlayer
+    lateinit var player: MVideoPlayer
 
     override fun onCreate(savedInstanceState: Bundle) {
         super.onCreate(savedInstanceState)
@@ -163,11 +154,11 @@ You can see the almost identical code in action in the sample project.
 
 ## Programmatic Control
 
-Here's a list of methods that can be used to control the `BetterVideoPlayer` programmatically.
+Here's a list of methods that can be used to control the `BMVideoPlayer` programmatically.
 Full list of available methods is in [IBetterVideoPlayer](https://github.com/halilozercan/BetterVideoPlayer/blob/master/bvpkotlin/src/main/java/com/halilibo/bvpkotlin/IBetterVideoPlayer.kt) interface.
 
 ```kotlin
-val player: BetterVideoPlayer = findViewById<BetterVideoPlayer>(R.id.bvp)
+val player: MVideoPlayer = findViewById<BetterVideoPlayer>(R.id.bvp)
 
 // Sets a video source to be played.
 player.setSource(Uri)
@@ -237,7 +228,7 @@ player.getDuration()
 There are options that can be used to change the default behavior of the `BetterVideoPlayer`:
 
 ```kotlin
-val player: BetterVideoPlayer = findViewById<BetterVideoPlayer>(R.id.bvp)
+val player: MVideoPlayer = findViewById<BetterVideoPlayer>(R.id.bvp)
 
 // Defaults to true. The controls fade out when playback starts.
 player.setHideControlsOnPlay(boolean)
@@ -268,7 +259,7 @@ player.setCaptions(Uri, mimeType)
 The programmatic configuration options shown above can also be configured directly from your layout:
 
 ```xml
-<com.halilibo.bvpkotlin.BetterVideoPlayer
+<com.halilibo.bvpkotlin.MVideoPlayer
     android:id="@+id/player"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
