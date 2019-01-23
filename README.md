@@ -1,4 +1,4 @@
-## Better Video Player
+##Video Player
 
 <img src="https://raw.githubusercontent.com/halilozercan/bettervideoplayer/master/screens/fullscreen.png" width="600px" />
 
@@ -62,7 +62,7 @@ The layout for your player Activity can be very simple. You only need a `BetterV
 all the controls and everything else are created by the player itself.
 
 ```xml
-<com.halilibo.bvpkotlin.BetterVideoPlayer
+<com.moktar.mvpkotlin.BetterVideoPlayer
     android:id="@+id/player"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
@@ -91,7 +91,7 @@ bvp.setCaptions(R.raw.sub, CaptionsView.SubMime.SUBRIP)
 BetterVideoPlayer also lets you define the text size(in sp) and color of captions inside XML view.
 
 ```xml
-<com.halilibo.bvpkotlin.BetterVideoPlayer
+<com.moktar.mvpkotlin.VideoPlayer
         android:id="@+id/bvp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
