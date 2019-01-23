@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.moktar.mvpkotlin.BetterVideoPlayer
+import com.moktar.mvpkotlin.MVideoPlayer
 
 class BackgroundActivity : AppCompatActivity() {
 
@@ -13,7 +13,7 @@ class BackgroundActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_background)
 
-        val bvp = findViewById<BetterVideoPlayer>(R.id.bvp)
+        val bvp = findViewById<MVideoPlayer>(R.id.bvp)
         bvp.setSource(Uri.parse("android.resource://" + packageName + "/" + R.raw.video))
         bvp.setVolume(0f, 0f)
 

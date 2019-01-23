@@ -34,7 +34,7 @@ import java.util.*
 /**
  * @author moktar
  */
-class BetterVideoPlayer @JvmOverloads constructor(
+class MVideoPlayer @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,
         defStyleAttr: Int = 0
@@ -1068,7 +1068,7 @@ class BetterVideoPlayer @JvmOverloads constructor(
         // Utilities
 
         private fun log(message: String, vararg args: Any) {
-            Log.d("BetterVideoPlayer", String.format(message, *args))
+            Log.d("MVideoPlayer", String.format(message, *args))
         }
     }
 }

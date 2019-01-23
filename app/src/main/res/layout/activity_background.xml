@@ -6,7 +6,7 @@
     xmlns:bvp="http://schemas.android.com/apk/res-auto"
     tools:context="com.moktar.sample.BackgroundActivity">
 
-    <com.moktar.mvpkotlin.BetterVideoPlayer
+    <com.moktar.mvpkotlin.MVideoPlayer
         android:id="@+id/bvp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

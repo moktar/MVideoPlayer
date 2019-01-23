@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.moktar.sample.MainActivity">
 
-    <com.moktar.mvpkotlin.BetterVideoPlayer
+    <com.moktar.mvpkotlin.MVideoPlayer
         android:id="@+id/bvp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

@@ -9,13 +9,13 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.moktar.mvpkotlin.BetterVideoPlayer
+import com.moktar.mvpkotlin.MVideoPlayer
 import com.moktar.mvpkotlin.VideoCallback
 import com.moktar.mvpkotlin.captions.CaptionsView
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var bvp: BetterVideoPlayer
+    lateinit var bvp: MVideoPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,19 +58,19 @@ class MainActivity : AppCompatActivity() {
         bvp.enableSwipeGestures(window)
 
         bvp.setCallback(object : VideoCallback {
-            override fun onStarted(player: BetterVideoPlayer) {
+            override fun onStarted(player: MVideoPlayer) {
                 Log.i(TAG, "Started")
             }
 
-            override fun onPaused(player: BetterVideoPlayer) {
+            override fun onPaused(player: MVideoPlayer) {
                 Log.i(TAG, "Paused")
             }
 
-            override fun onPreparing(player: BetterVideoPlayer) {
+            override fun onPreparing(player: MVideoPlayer) {
                 Log.i(TAG, "Preparing")
             }
 
-            override fun onPrepared(player: BetterVideoPlayer) {
+            override fun onPrepared(player: MVideoPlayer) {
                 Log.i(TAG, "Prepared")
             }
 
@@ -78,15 +78,15 @@ class MainActivity : AppCompatActivity() {
                 Log.i(TAG, "Buffering $percent")
             }
 
-            override fun onError(player: BetterVideoPlayer, e: Exception) {
+            override fun onError(player: MVideoPlayer, e: Exception) {
                 Log.i(TAG, "Error " +e.message)
             }
 
-            override fun onCompletion(player: BetterVideoPlayer) {
+            override fun onCompletion(player: MVideoPlayer) {
                 Log.i(TAG, "Completed")
             }
 
-            override fun onToggleControls(player: BetterVideoPlayer, isShowing: Boolean) {
+            override fun onToggleControls(player: MVideoPlayer, isShowing: Boolean) {
 
             }
         })

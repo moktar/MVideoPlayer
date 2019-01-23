@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.moktar.mvpkotlin.BetterVideoPlayer
+import com.moktar.mvpkotlin.MVideoPlayer
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -14,7 +14,7 @@ import com.moktar.mvpkotlin.BetterVideoPlayer
  */
 class FullscreenActivity : AppCompatActivity() {
     private val mHideHandler = Handler()
-    lateinit var mBetterVideoPlayer: BetterVideoPlayer
+    lateinit var mBetterVideoPlayer: MVideoPlayer
     private val mHidePart2Runnable = Runnable {
         // Delayed removal of status and navigation bar
 

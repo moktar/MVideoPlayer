@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="BetterVideoPlayer">
+    <declare-styleable name="MVideoPlayer">
 
         <attr name="bvp_source" format="string" />
         <attr name="bvp_title" format="string" />

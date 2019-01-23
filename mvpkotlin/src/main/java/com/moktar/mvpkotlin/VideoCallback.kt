@@ -9,25 +9,25 @@ interface VideoCallback {
      * Called right after Android MediaPlayer is started
      * @param player
      */
-    fun onStarted(player: BetterVideoPlayer)
+    fun onStarted(player: MVideoPlayer)
 
     /**
      * Called right after Android MediaPlayer is paused
      * @param player
      */
-    fun onPaused(player: BetterVideoPlayer)
+    fun onPaused(player: MVideoPlayer)
 
     /**
      * Called just before setting the source of Android MediaPlayer
      * @param player
      */
-    fun onPreparing(player: BetterVideoPlayer)
+    fun onPreparing(player: MVideoPlayer)
 
     /**
      * Called when Android MediaPlayer is prepared
      * @param player
      */
-    fun onPrepared(player: BetterVideoPlayer)
+    fun onPrepared(player: MVideoPlayer)
 
     /**
      * Called whenever Android MediaPlayer fires a BufferUpdate.
@@ -40,13 +40,13 @@ interface VideoCallback {
      * @param player
      * @param e
      */
-    fun onError(player: BetterVideoPlayer, e: Exception)
+    fun onError(player: MVideoPlayer, e: Exception)
 
     /**
      * Called after video is completed and every action is taken by the player.
      * @param player
      */
-    fun onCompletion(player: BetterVideoPlayer)
+    fun onCompletion(player: MVideoPlayer)
 
     /**
      * New: Control toggling might be of importance especially when using fullscreen.
@@ -55,5 +55,5 @@ interface VideoCallback {
      * @param player
      * @param isShowing : True if controls are visible.
      */
-    fun onToggleControls(player: BetterVideoPlayer, isShowing: Boolean)
+    fun onToggleControls(player: MVideoPlayer, isShowing: Boolean)
 }

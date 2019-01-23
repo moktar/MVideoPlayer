@@ -41,12 +41,12 @@ internal interface IBetterVideoPlayer {
     fun setProgressCallback(callback: VideoProgressCallback)
 
     /**
-     * There are 3 default buttons in BetterVideoPlayer: play, pause, restart.
+     * There are 3 default buttons in MVideoPlayer: play, pause, restart.
      * You can set their drawable by using this method.
      * @param   type    Which button is being targeted.
      * @param   drawable    Drawable object to use for styling.
      */
-    fun setButtonDrawable(type: BetterVideoPlayer.ButtonType, drawable: Drawable)
+    fun setButtonDrawable(type: MVideoPlayer.ButtonType, drawable: Drawable)
 
     fun setHideControlsOnPlay(hide: Boolean)
 
@@ -109,7 +109,7 @@ internal interface IBetterVideoPlayer {
 
     fun release()
 
-    // TODO: move captions outside of BetterVideoPlayer.
+    // TODO: move captions outside of MVideoPlayer.
     fun setCaptions(source: Uri?, subMime: CaptionsView.SubMime)
 
     fun setCaptions(@RawRes resId: Int, subMime: CaptionsView.SubMime)
