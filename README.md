@@ -40,24 +40,19 @@ There's only a bit of configuration required. However, MVideoPlayer offers great
 when the device orientation changes. The player will adapt the aspect ratio accordingly. You just need to
 set `android:configChanges` values to your `Activity` in `AndroidManifest.xml`:*
 
-```xml
 <activity
     android:name=".MyPlayerActivity"
     android:label="@string/my_player_activity"
     android:configChanges="orientation|keyboardHidden|screenLayout|screenSize" /> 
-```
 
 ##### Layouts
 
 The layout for your player Activity can be very simple. You only need a `MVideoPlayer` view,
-all the controls and everything else are created by the player itself.
-
-```xml
+all the controls and everything else are created by the player itsel
 <com.moktar.mvpkotlin.MVideoPlayer
     android:id="@+id/player"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
-```
 
 ### Notable Features
 
@@ -154,8 +149,8 @@ You can see the almost identical code in action in the sample project.
 
 ## Programmatic Control
 
-Here's a list of methods that can be used to control the `BMVideoPlayer` programmatically.
-Full list of available methods is in [IBetterVideoPlayer](https://github.com/halilozercan/BetterVideoPlayer/blob/master/bvpkotlin/src/main/java/com/halilibo/bvpkotlin/IBetterVideoPlayer.kt) interface.
+Here's a list of methods that can be used to control the `MVideoPlayer` programmatically.
+Full list of available methods is in [IMVideoPlayer](https://github.com/halilozercan/BetterVideoPlayer/blob/master/bvpkotlin/src/main/java/com/halilibo/bvpkotlin/IBetterVideoPlayer.kt) interface.
 
 ```kotlin
 val player: MVideoPlayer = findViewById<BetterVideoPlayer>(R.id.bvp)
@@ -225,7 +220,7 @@ player.getDuration()
 
 ## Programmatic Configuration
 
-There are options that can be used to change the default behavior of the `BetterVideoPlayer`:
+There are options that can be used to change the default behavior of the `MVideoPlayer`:
 
 ```kotlin
 val player: MVideoPlayer = findViewById<BetterVideoPlayer>(R.id.bvp)
