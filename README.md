@@ -57,7 +57,7 @@ all the controls and everything else are created by the player itsel
 ### Notable Features
 
 MVideoPlayer is capable of almost all functionality that you expect from a VideoPlayer. However, it is important to repeat that
-BetterVideoPlayer uses Android MediaPlayer API. Thus, it __does not provide every codec in the world__. In the future, there is a plan for moving underlying
+MVideoPlayer uses Android MediaPlayer API. Thus, it __does not provide every codec in the world__. In the future, there is a plan for moving underlying
 player to ExoPlayer.
 
 #### Captions
