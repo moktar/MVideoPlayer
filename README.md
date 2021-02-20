@@ -78,7 +78,7 @@ MVideoPlayer also lets you define the text size(in sp) and color of captions ins
 
 ```xml
 <com.moktar.mvpkotlin.MVideoPlayer
-        android:id="@+id/bvp"
+        android:id="@+id/mvp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         mvp:mvp_captionSize="20sp"
