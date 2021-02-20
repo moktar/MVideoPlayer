@@ -33,7 +33,7 @@ maven { url 'https://jitpack.io' }
 
 ##### Configuring a Player Activity
 
-You will need an `Activity` in your app that will hold the `BetterVideoPlayer` view and playback content.
+You will need an `Activity` in your app that will hold the `MVideoPlayer` view and playback content.
 There's only a bit of configuration required. However, MVideoPlayer offers great 'customizability'.
 
 *Host Activity should disable recreation on orientation changes. This allows playback to continue
@@ -68,10 +68,10 @@ Captions can be obtained both online and from resource directory.MVideoPlayer __
 
 ```kotlin
 // Online SUBRIP subtitle
-bvp.setCaptions("https://www.example.com/subrip.srt", CaptionsView.SubMime.SUBRIP)
+mvp.setCaptions("https://www.example.com/subrip.srt", CaptionsView.SubMime.SUBRIP)
 
 // res/raw SUBRIP subtitle
-bvp.setCaptions(R.raw.sub, CaptionsView.SubMime.SUBRIP)
+mvp.setCaptions(R.raw.sub, CaptionsView.SubMime.SUBRIP)
 ```
 
 MVideoPlayer also lets you define the text size(in sp) and color of captions inside XML view.
@@ -81,8 +81,8 @@ MVideoPlayer also lets you define the text size(in sp) and color of captions ins
         android:id="@+id/bvp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        bvp:bvp_captionSize="20sp"
-        bvp:bvp_captionColor="@android:color/holo_blue_light"/>
+        mvp:mvp_captionSize="20sp"
+        mvp:mvp_captionColor="@android:color/holo_blue_light"/>
 ```
 
 #### Toolbar
@@ -153,7 +153,7 @@ Here's a list of methods that can be used to control the `MVideoPlayer` programm
 Full list of available methods is in [IMVideoPlayer](https://github.com/halilozercan/BetterVideoPlayer/blob/master/bvpkotlin/src/main/java/com/halilibo/bvpkotlin/IBetterVideoPlayer.kt) interface.
 
 ```kotlin
-val player: MVideoPlayer = findViewById<BetterVideoPlayer>(R.id.bvp)
+val player: MVideoPlayer = findViewById<BetterVideoPlayer>(R.id.mvp)
 
 // Sets a video source to be played.
 player.setSource(Uri)
@@ -223,7 +223,7 @@ player.getDuration()
 There are options that can be used to change the default behavior of the `MVideoPlayer`:
 
 ```kotlin
-val player: MVideoPlayer = findViewById<BetterVideoPlayer>(R.id.bvp)
+val player: MVideoPlayer = findViewById<BetterVideoPlayer>(R.id.mvp)
 
 // Defaults to true. The controls fade out when playback starts.
 player.setHideControlsOnPlay(boolean)
@@ -258,13 +258,13 @@ The programmatic configuration options shown above can also be configured direct
     android:id="@+id/player"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:bvp_autoPlay="false"
-    app:bvp_disableControls="false"
-    app:bvp_hideControlsOnPlay="true"
-    app:bvp_pauseDrawable="@drawable/bvp_action_pause"
-    app:bvp_playDrawable="@drawable/bvp_action_play"
-    app:bvp_restartDrawable="@drawable/bvp_action_restart"
-    app:bvp_source="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+    app:mvp_autoPlay="false"
+    app:mvp_disableControls="false"
+    app:mvp_hideControlsOnPlay="true"
+    app:mvp_pauseDrawable="@drawable/bvp_action_pause"
+    app:mvp_playDrawable="@drawable/bvp_action_play"
+    app:mvp_restartDrawable="@drawable/bvp_action_restart"
+    app:mvp_source="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
     app:bvp_captionSize="22sp"
     app:bvp_captionColor="@color/caption_color"
     app:bvp_gestureType="SwipeGesture"
