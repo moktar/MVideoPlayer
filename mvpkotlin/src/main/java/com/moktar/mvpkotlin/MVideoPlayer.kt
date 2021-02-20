@@ -297,55 +297,55 @@ class MVideoPlayer @JvmOverloads constructor(
         attrs?.let {
             val a = context.theme.obtainStyledAttributes(
                     attrs,
-                    R.styleable.BetterVideoPlayer,
+                    R.styleable.MVideoPlayer,
                     0, 0)
             try {
 
-                a.getString(R.styleable.BetterVideoPlayer_bvp_source)?.let { source ->
+                a.getString(R.styleable.MVideoPlayer_mvp_source)?.let { source ->
                     if (source.trim().isNotEmpty()) {
                         mSource = Uri.parse(source)
                     }
                 }
 
-                a.getString(R.styleable.BetterVideoPlayer_bvp_title)?.let { title ->
+                a.getString(R.styleable.MVideoPlayer_mvp_title)?.let { title ->
                     if (title.trim().isNotEmpty()) {
                         mTitle = title
                     }
                 }
 
                 mPlayDrawable = a.getDrawable(
-                        R.styleable.BetterVideoPlayer_bvp_playDrawable)
+                        R.styleable.MVideoPlayer_mvp_playDrawable)
                 mPauseDrawable = a.getDrawable(
-                        R.styleable.BetterVideoPlayer_bvp_pauseDrawable)
+                        R.styleable.MVideoPlayer_mvp_pauseDrawable)
                 mRestartDrawable = a.getDrawable(
-                        R.styleable.BetterVideoPlayer_bvp_restartDrawable)
+                        R.styleable.MVideoPlayer_mvp_restartDrawable)
                 hideControlsDuration = a.getInteger(
-                        R.styleable.BetterVideoPlayer_bvp_hideControlsDuration, hideControlsDuration)
+                        R.styleable.MVideoPlayer_mvp_hideControlsDuration, hideControlsDuration)
 
                 mHideControlsOnPlay = a.getBoolean(
-                        R.styleable.BetterVideoPlayer_bvp_hideControlsOnPlay, false)
+                        R.styleable.MVideoPlayer_mvp_hideControlsOnPlay, false)
                 mAutoPlay = a.getBoolean(
-                        R.styleable.BetterVideoPlayer_bvp_autoPlay, false)
+                        R.styleable.MVideoPlayer_mvp_autoPlay, false)
                 mLoop = a.getBoolean(
-                        R.styleable.BetterVideoPlayer_bvp_loop, false)
+                        R.styleable.MVideoPlayer_mvp_loop, false)
                 mShowTotalDuration = a.getBoolean(
-                        R.styleable.BetterVideoPlayer_bvp_showTotalDuration, false)
+                        R.styleable.MVideoPlayer_mvp_showTotalDuration, false)
                 mBottomProgressBarVisibility = a.getBoolean(
-                        R.styleable.BetterVideoPlayer_bvp_showBottomProgressBar, false)
+                        R.styleable.MVideoPlayer_mvp_showBottomProgressBar, false)
                 mGestureType = GestureType.values()[
                         a.getInt(
-                                R.styleable.BetterVideoPlayer_bvp_gestureType, 0)
+                                R.styleable.MVideoPlayer_mvp_gestureType, 0)
                 ]
                 mShowToolbar = a.getBoolean(
-                        R.styleable.BetterVideoPlayer_bvp_showToolbar, true)
+                        R.styleable.MVideoPlayer_mvp_showToolbar, true)
                 mControlsDisabled = a.getBoolean(
-                        R.styleable.BetterVideoPlayer_bvp_disableControls, false)
+                        R.styleable.MVideoPlayer_mvp_disableControls, false)
                 mSubViewTextSize = a.getDimensionPixelSize(
-                        R.styleable.BetterVideoPlayer_bvp_captionSize,
+                        R.styleable.MVideoPlayer_mvp_captionSize,
                         resources.getDimensionPixelSize(R.dimen.bvp_subtitle_size))
                 mSubViewTextColor = a.getColor(
-                        R.styleable.BetterVideoPlayer_bvp_captionColor,
-                        ContextCompat.getColor(context, R.color.bvp_subtitle_color))
+                        R.styleable.MVideoPlayer_mvp_captionColor,
+                        ContextCompat.getColor(context, R.color.mvp_subtitle_color))
 
             } catch (e: Exception) {
                 log("Exception " + e.message)
@@ -355,15 +355,15 @@ class MVideoPlayer @JvmOverloads constructor(
             }
         } ?: run {
             mSubViewTextSize = resources.getDimensionPixelSize(R.dimen.bvp_subtitle_size)
-            mSubViewTextColor = ContextCompat.getColor(context, R.color.bvp_subtitle_color)
+            mSubViewTextColor = ContextCompat.getColor(context, R.color.mvp_subtitle_color)
         }
 
         if (mPlayDrawable == null)
-            mPlayDrawable = ContextCompat.getDrawable(context, R.drawable.bvp_action_play)
+            mPlayDrawable = ContextCompat.getDrawable(context, R.drawable.mvp_action_play)
         if (mPauseDrawable == null)
-            mPauseDrawable = ContextCompat.getDrawable(context, R.drawable.bvp_action_pause)
+            mPauseDrawable = ContextCompat.getDrawable(context, R.drawable.mvp_action_pause)
         if (mRestartDrawable == null)
-            mRestartDrawable = ContextCompat.getDrawable(context, R.drawable.bvp_action_restart)
+            mRestartDrawable = ContextCompat.getDrawable(context, R.drawable.mvp_action_restart)
     }
 
     override fun setSource(source: Uri) {

@@ -10,9 +10,9 @@
         android:id="@+id/bvp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        bvp:bvp_autoPlay="true"
-        bvp:bvp_disableControls="true"
-        bvp:bvp_loop="true"/>
+        bvp:mvp_autoPlay="true"
+        bvp:mvp_disableControls="true"
+        bvp:mvp_loop="true"/>
 
     <RelativeLayout
         android:layout_width="match_parent"

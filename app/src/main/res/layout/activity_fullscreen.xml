@@ -12,6 +12,6 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:keepScreenOn="true"
-        bvp:bvp_autoPlay="true"/>
+        bvp:mvp_autoPlay="true"/>
 
 </FrameLayout>

@@ -40,6 +40,7 @@ class FullscreenActivity : AppCompatActivity() {
      * system UI. This is to prevent the jarring behavior of controls going away
      * while interacting with activity UI.
      */
+    @SuppressLint("ClickableViewAccessibility")
     private val mDelayHideTouchListener = View.OnTouchListener { view, motionEvent ->
         if (AUTO_HIDE) {
             delayedHide(AUTO_HIDE_DELAY_MILLIS)

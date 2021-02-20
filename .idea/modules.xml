@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VideoPlayer.iml" filepath="$PROJECT_DIR$/VideoPlayer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mvpkotlin/mvpkotlin.iml" filepath="$PROJECT_DIR$/mvpkotlin/mvpkotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MVideoPlaye.iml" filepath="$PROJECT_DIR$/.idea/MVideoPlaye.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MVideoPlaye.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MVideoPlaye.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mvpkotlin/MVideoPlaye.mvpkotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/mvpkotlin/MVideoPlaye.mvpkotlin.iml" />
     </modules>
   </component>
 </project>

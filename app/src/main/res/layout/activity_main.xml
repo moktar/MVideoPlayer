@@ -10,13 +10,13 @@
         android:id="@+id/bvp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        bvp:bvp_autoPlay="true"
-        bvp:bvp_captionColor="#e7e7e7"
-        bvp:bvp_captionSize="20sp"
-        bvp:bvp_hideControlsOnPlay="true"
-        bvp:bvp_showBottomProgressBar="true"
-        bvp:bvp_title="Big Buck Bunny"
-        bvp:bvp_showTotalDuration="false"/>
+        bvp:mvp_autoPlay="true"
+        bvp:mvp_captionColor="#e7e7e7"
+        bvp:mvp_captionSize="20sp"
+        bvp:mvp_hideControlsOnPlay="true"
+        bvp:mvp_showBottomProgressBar="true"
+        bvp:mvp_showTotalDuration="false"
+        bvp:mvp_title="Big Buck Bunny"/>
 
     <Button
         android:id="@+id/background_activity_button"

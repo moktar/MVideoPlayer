@@ -51,7 +51,7 @@ internal class DownloadFile(
             input.close()
 
         } catch (e: Exception) {
-            Log.e("Error: ", e.message)
+            e.message?.let { Log.e("Error: ", it) }
             listener!!.onFail(e)
         }
 

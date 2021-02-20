@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bvp_controls_background"
+    android:background="@drawable/mvp_controls_background"
     android:clickable="true"
     android:id="@+id/bvp_include_relativelayout"
     android:paddingLeft="@dimen/bvp_content_inset_half"
@@ -55,7 +55,7 @@
         android:layout_width="@dimen/bvp_button_size"
         android:layout_height="@dimen/bvp_button_size"
         android:background="?selectableItemBackground"
-        android:src="@drawable/bvp_action_play"
+        android:src="@drawable/mvp_action_play"
         tools:ignore="ContentDescription"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
